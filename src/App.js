@@ -1,27 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
 import EmployList from './components/EmployeeList';
+import AddEmployee from './components/AddEmployee';
 function App() {
+  //sending props 
   const employees=[
     {
+      id: 1,
       name: 'Ricardo Jimenez',
-      age:'25'
     },
     {
+      id: 2,
       name: 'Juan Suarez',
-      age:'21'
     },
     {
+      id:3,
       name: 'Karla Jimenez',
-      age:'23'
     }
-  ]
+  ];
+
+  //sending functions
+  const addEmployee = (id)=>{
+    console.log('agregado ' + id);
+  };
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-       
         <EmployList employee={employees}/>
+        <AddEmployee add={addEmployee} />
       </header>
     </div>
   );
