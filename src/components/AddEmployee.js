@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Button} from 'react-bootstrap';
 
 
 export default function AddEmployee(props){
@@ -9,7 +9,7 @@ export default function AddEmployee(props){
 
     return(
         <div>
-            <button className="btn" onClick={()=>add(id)} >Add</button>
+             <Button variant="primary" onClick={()=>add(id)} >Add</Button>{' '}
         </div>
     );
 
