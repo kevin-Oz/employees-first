@@ -2,8 +2,8 @@ import React from 'react';
 
 
  export default  function EmployeeList(props){
-	console.log(props);
-	const employees = props.employee;
+	//	Destructuring construction
+	const { employees=[] } = props;
 	const listItems = employees.map((e) =>
 	  <li key={e.id}>{e.name} </li>
 	);

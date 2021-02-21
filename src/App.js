@@ -24,12 +24,11 @@ function App() {
     console.log('agregado ' + id);
   };
 
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <EmployList employee={employees}/>
+        <EmployList employees={employees}/>
         <AddEmployee add={addEmployee} />
       </header>
     </div>
